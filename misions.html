@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="css/missions.css" rel="stylesheet">
+    <title>Heroicap</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-color sticky-top">
+        <div class="p-1">
+            <button class=" navbar-dark navbar-toggler" type="button" onclick="menuHide()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="navbar-brand mb-0 h1 ml-1 text-color-white">Heroicap</span>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-start">
+                    <div class="bg-color menu-style col" id="menu-panel">
+                        <div class="nav flex-column nav-pills me-3 mt-2 " id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active menu-btn-color" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-hero" role="tab"
+                            aria-controls="v-pills-hero" aria-selected="true" onclick="hideMenu()"><i class="bi bi-person-lines-fill"></i> Perfil del
+                            heroe</a>
+                        <a class="nav-link menu-btn-color" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-mision" role="tab"
+                            aria-controls="v-pills-mision" aria-selected="false" onclick="hideMenu()"><i class="bi bi-ui-checks"></i> Mis
+                            misiones</a>
+                        <a class="nav-link menu-btn-color" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-table" role="tab"
+                            aria-controls="v-pills-table" aria-selected="false" onclick="hideMenu()"><i class="bi bi-ui-checks-grid"></i> Tablero de
+                            misiones</a>
+                        <a class="nav-link menu-btn-color" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-organization"
+                            role="tab" aria-controls="v-pills-organization" aria-selected="false" onclick="hideMenu()"><i
+                                class="bi bi-shop-window"></i> Organizaciones</a>
+                        <a class="nav-link menu-btn-color" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab"
+                            aria-controls="v-pills-settings" aria-selected="false" onclick="hideMenu()"><i class="bi bi-hammer"></i> Herramientas</a>
+                        <a class="nav-link menu-btn-color" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-configuration"
+                            role="tab" aria-controls="v-pills-configuration" aria-selected="false" onclick="hideMenu()"><i
+                                class="bi bi-gear-fill"></i> Configuracion</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content col" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-hero" role="tabpanel"
+                            aria-labelledby="v-pills-hero-tab">
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col-6">
+                                        <div class="text-center mt-2">
+                                            <img src="img/user.png" class=" img-thumbnail" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6>Usuario</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                        <h6>Rango</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                        <h6>Titulo</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <h6>01</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <p>Nivel espiritual</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <small> 5/100 xp</small>
+                                            </div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
+                                                style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <h6>01</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <p>Nivel reputacion</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <small> 75/100 xp</small>
+                                            </div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"
+                                                style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <h6>Estadisticas</h6>
+                                    </div>
+                                </div>
+        
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Cultura</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Deporte</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Humanitarismo</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Politica</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Carisma</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col">
+                                        <div class="row align-items-start">
+                                            <div class="col-4">
+                                                <h6>Inteligencia</h6>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                                <button class="btn btn-primary" type="button">completa tu perfil</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-mision" role="tabpanel"
+                            aria-labelledby="v-pills-mision-tab">
+                            <div class="list-group mt-2">
+                                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small class="text-muted">3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small class="text-muted">3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small class="text-muted">3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small class="text-muted">3 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                        risus varius blandit.</p>
+                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-table" role="tabpanel"
+                    aria-labelledby="v-pills-table-tab">
+                    <ul class="nav nav-pills mb-3 mt-2" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-spirit-tab" data-bs-toggle="pill" href="#pills-spirit"
+                                role="tab" aria-controls="pills-spirit" aria-selected="true">Espiritu</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-reputation-tab" data-bs-toggle="pill" href="#pills-reputation"
+                                role="tab" aria-controls="pills-reputation" aria-selected="false">Reputacion</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-spirit" role="tabpanel"
+                            aria-labelledby="pills-spirit-tab">
+                            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                <small>Donec id elit non mi porta.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                <small class="text-muted">Donec id elit non mi porta.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                <small class="text-muted">Donec id elit non mi porta.</small>
+                            </a>
+                        </div>
+                        <div class="tab-pane fade" id="pills-reputation" role="tabpanel"
+                            aria-labelledby="pills-reputation-tab">
+                            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                <small>Donec id elit non mi porta.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                <small class="text-muted">Donec id elit non mi porta.</small>
+                            </a>
+
+                        </div>
+                    </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-organization" role="tabpanel"
+                            aria-labelledby="v-pills-organization-tab">
+                            <p>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Filtro
+                                    </button>
+                                </div>
+                            </p>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingOrg">
+                                        <label for="floatingOrg">Organizacion</label>
+                                    </div>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <select class="form-select mt-1" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <select class="form-select mt-1" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <div class="d-grid gap-2 mt-1">
+                                        <button class="btn btn-primary" type="button">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col-6">
+                                        <div class="text-center mt-2">
+                                            <img src="img/organizacion.png" class=" img-thumbnail" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6>Organizacion</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                        <h6>Resumen</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col-6">
+                                        <div class="text-center mt-2">
+                                            <img src="img/organizacion.png" class=" img-thumbnail" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6>Organizacion</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                        <h6>Resumen</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-section rounded mt-2">
+                                <div class="row p-2">
+                                    <div class="col-6">
+                                        <div class="text-center mt-2">
+                                            <img src="img/organizacion.png" class=" img-thumbnail" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6>Organizacion</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                        <h6>Resumen</h6>
+                                        <p>xxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                            aria-labelledby="v-pills-settings-tab">
+                            <div class="accordion row mt-2" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Fondos concursables
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the first item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Cursos de formacion gratuitos
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-configuration" role="tabpanel"
+                            aria-labelledby="v-pills-configuration-tab">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src='js/app.js'></script>
+    <script src="js/misions.js"></script>
+
+</body>
+
+</html>

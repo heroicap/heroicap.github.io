@@ -1,0 +1,76 @@
+.hide {
+  display: none !important;
+}
+
+.size {
+  width: 210px;
+}
+
+.background-section {
+  background-color: lightgrey;
+}
+
+.bg-color {
+  background-color: #c82e2e !important;
+}
+
+.text-color-white {
+  color: white !important;
+}
+.navbar {
+  z-index: 3;
+}
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.menu-style {
+  position: sticky;
+  max-width: 260px;
+  transform: translateX(-260px);
+  height: 100vh;
+  margin-left: -1rem;
+  margin-right: 1rem;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .menu-style {
+    position: absolute;
+    top: 64px;
+  }
+}
+
+.menu-btn-color {
+  color: white !important;
+}
+
+.button-menu {
+  background-color: #f65c5c;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #f65c5c;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.h-100vh {
+  height: 100vh;
+}
+.h-100vh-navbar {
+  height: calc(100vh - 50px);
+}
+
+#alert-login{
+  position: sticky;
+}
+
+.primary-color {
+  
+}
